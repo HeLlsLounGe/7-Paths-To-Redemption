@@ -7,7 +7,10 @@ public class MoneyScript : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] float ChaseDistance = 5f;
     [SerializeField] float MoveSpeed = 5f;
-    
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     void Update()
     {
         Vector3 PlayerPosition = player.transform.position;

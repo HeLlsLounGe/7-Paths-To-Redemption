@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Money
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Backround
+    uniqueID: 4264419453
+    locked: 0
+  - name: Walls
+    uniqueID: 2469651055
+    locked: 0
+  - name: Pickups
+    uniqueID: 3015004325
+    locked: 0
+  - name: Player
+    uniqueID: 3638734883
+    locked: 0
+  - name: Enemies
+    uniqueID: 1159700845
+    locked: 0
+  - name: UI
+    uniqueID: 3261351901
     locked: 0

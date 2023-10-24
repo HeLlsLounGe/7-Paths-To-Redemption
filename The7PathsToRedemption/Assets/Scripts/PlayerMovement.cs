@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float PlayerSpeed = 10f;
-
+    [SerializeField] float PlayerLives = 3f;
     Vector2 moveInput;
 
     Rigidbody2D myRigidBody;
@@ -24,7 +24,13 @@ public class PlayerMovement : MonoBehaviour
         if (IsAlive)
         {
             Run();
+        }else
+        {
+            Die();
         }
+    }void Die()
+    {
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
 
     void OnMove(InputValue value)
