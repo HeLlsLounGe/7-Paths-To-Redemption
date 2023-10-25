@@ -12,7 +12,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI CashText;
     void Start()
     {
-        CashText.text = "Coins:" + Cash;
+        CashText.text = "Money:" + Cash.ToString();
     }
     void Awake()
     {
@@ -24,7 +24,13 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-    }public void ProcessPlayerDeath()
+    }
+    public void AddToCoins(int cashToAdd)
+    {
+        Cash += cashToAdd;
+        CashText.text = "Money:" + Cash.ToString();
+    }
+    public void ProcessPlayerDeath()
     {
         if (PlayerLives > 1)
         {
@@ -43,9 +49,5 @@ public class GameSession : MonoBehaviour
     }void Update()
     {
         
-    }
-    public void ChangeCash(int delta)
-    {
-        Cash += delta;
     }
 }

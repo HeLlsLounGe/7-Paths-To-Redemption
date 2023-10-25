@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
 {
+    [SerializeField] int coinsPerPickup = 1;
+    bool wasCollected = false;
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !wasCollected)
         {
-            FindObjectOfType<GameSession>().ChangeCash(1);
+            wasCollected = true;
+            FindObjectOfType<GameSession>().AddToCoins(coinsPerPickup);
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }
