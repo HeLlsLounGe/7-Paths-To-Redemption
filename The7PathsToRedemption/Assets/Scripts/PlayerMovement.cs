@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (PlayerLives < 1)
+        {
+            IsAlive = false;
+        }
         if (IsAlive)
         {
             Run();
