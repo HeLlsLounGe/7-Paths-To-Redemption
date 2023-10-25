@@ -9,7 +9,10 @@ public class FliiesScript : MonoBehaviour
     [SerializeField] float Health = 1f;
 
     bool IsAlive = true;
-
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     void Update()
     {
         Vector3 PlayerPosition = player.transform.position;

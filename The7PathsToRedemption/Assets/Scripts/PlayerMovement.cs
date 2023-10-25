@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (PlayerLives < 1)
         if (IsAlive)
         {
             Run();
@@ -28,7 +29,15 @@ public class PlayerMovement : MonoBehaviour
         {
             Die();
         }
-    }void Die()
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemies")
+        {
+            PlayerLives--;
+        }
+    }
+    void Die()
     {
         FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
