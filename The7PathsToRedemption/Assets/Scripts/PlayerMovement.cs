@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
             Run();
         }else
         {
-            Die();
+            Dmg();
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -40,9 +40,9 @@ public class PlayerMovement : MonoBehaviour
             PlayerLives--;
         }
     }
-    void Die()
+    void Dmg()
     {
-        FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        FindObjectOfType<GameSession>().ProcessPlayerDmg();
     }
 
     void OnMove(InputValue value)

@@ -30,7 +30,7 @@ public class GameSession : MonoBehaviour
         Cash += cashToAdd;
         CashText.text = Cash.ToString();
     }
-    public void ProcessPlayerDeath()
+    public void ProcessPlayerDmg()
     {
         if (PlayerLives > 1)
         {
@@ -41,8 +41,9 @@ public class GameSession : MonoBehaviour
         }
     }void ResetGameSession()
     {
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene("Home");
-        Destroy(gameObject);
+        Destroy(gameObject);;
     }void TakeLife()
     {
         PlayerLives --;

@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 3441097842215593277}
   - component: {fileID: 511280863}
   m_Layer: 0
-  m_Name: Flies
+  m_Name: SlothFly
   m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,9 +222,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.006886944}
+  m_Offset: {x: 0, y: -0.015985757}
   serializedVersion: 2
-  m_Radius: 0.19008826
+  m_Radius: 0.24955726
 --- !u!95 &511280863
 Animator:
   serializedVersion: 5
