@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flies
+  m_Name: NormalFly
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -287776451, guid: 0b0673692b6f02447a713f1f5958dc0d, type: 3}
+      value: {fileID: -740176465, guid: fd9e2ea8b2015f0459c0c39c5df44e0d, type: 3}
     - time: 0.083333336
-      value: {fileID: -771960925, guid: 0b0673692b6f02447a713f1f5958dc0d, type: 3}
+      value: {fileID: -879319256, guid: fd9e2ea8b2015f0459c0c39c5df44e0d, type: 3}
     - time: 0.16666667
-      value: {fileID: 1151891805, guid: 0b0673692b6f02447a713f1f5958dc0d, type: 3}
+      value: {fileID: 1573185712, guid: fd9e2ea8b2015f0459c0c39c5df44e0d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -287776451, guid: 0b0673692b6f02447a713f1f5958dc0d, type: 3}
-    - {fileID: -771960925, guid: 0b0673692b6f02447a713f1f5958dc0d, type: 3}
-    - {fileID: 1151891805, guid: 0b0673692b6f02447a713f1f5958dc0d, type: 3}
+    - {fileID: -740176465, guid: fd9e2ea8b2015f0459c0c39c5df44e0d, type: 3}
+    - {fileID: -879319256, guid: fd9e2ea8b2015f0459c0c39c5df44e0d, type: 3}
+    - {fileID: 1573185712, guid: fd9e2ea8b2015f0459c0c39c5df44e0d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -22,12 +22,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (PlayerLives < 1)
+        {
+            IsAlive = false;
+        }
         if (IsAlive)
         {
             Run();
         }else
         {
-            Die();
+            Dmg();
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -37,9 +40,9 @@ public class PlayerMovement : MonoBehaviour
             PlayerLives--;
         }
     }
-    void Die()
+    void Dmg()
     {
-        FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        FindObjectOfType<GameSession>().ProcessPlayerDmg();
     }
 
     void OnMove(InputValue value)
