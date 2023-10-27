@@ -10,13 +10,12 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
 
     Rigidbody2D myRigidBody;
-
+    Animator MyAnimator;
     bool IsAlive = true;
-
-
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        MyAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -57,5 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         bool PlayerHZMoving = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
         bool PlayerVCMoving = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon;
+        MyAnimator.SetFloat("x", moveInput.x);
+        MyAnimator.SetFloat("y", -moveInput.y);
     }
 }

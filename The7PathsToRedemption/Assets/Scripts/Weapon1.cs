@@ -20,6 +20,7 @@ public class Weapon1 : MonoBehaviour
     bool Shotgun = false;
     bool BigGun = false;
     bool FastGun = false;
+    bool FollowShots = false;
     void Update()
     {
         if (shootOn)
@@ -61,29 +62,38 @@ public class Weapon1 : MonoBehaviour
             ShotsPerSec = .4f;
             BulletDmg = 2f;
             Knockback = 1f;
-        }else if (Homing)
+            FollowShots = false;
+        }
+        else if (Homing)
         {
             ShotsPerSec = .5f;
             BulletDmg = 2f;
-            Knockback = 3f;
+            Knockback = 2f;
+            FollowShots = true;
         }else if (Shotgun)
         {
             ShotsPerSec = 1.5f;
             BulletDmg = 2.5f;
             Knockback = 6f;
-        }else if (BigGun)
+            FollowShots = false;
+        }
+        else if (BigGun)
         {
             ShotsPerSec = .4f;
             BulletDmg = 8f;
             Knockback = 8f;
-        }else if (FastGun)
+            FollowShots = false;
+        }
+        else if (FastGun)
         {
-            ShotsPerSec = .4f;
-            BulletDmg = 2f;
+            ShotsPerSec = .2f;
+            BulletDmg = 1f;
             Knockback = 0f;
-        }else
+            FollowShots = false;
+        }
+        else
         {
-            //shootOn = false;
+            shootOn = false;
         }
     }
 }
