@@ -11,15 +11,22 @@ public class Weapon1 : MonoBehaviour
     [SerializeField] float BulletDmg = 2f;
     [SerializeField] float BulletDestroy = 5f;
     [SerializeField] float Knockback = 1;
+
+    [SerializeField] AudioClip PistolSND;
+    [SerializeField] AudioClip HomingSND;
+    [SerializeField] AudioClip ShotgunSND;
+    [SerializeField] AudioClip BigGunSND;
+    [SerializeField] AudioClip FastGunSND;
+
     float BulletTimeChecker = 1000f;
     float x = 1;
     float y = 0;
-    bool shootOn = true;
-    bool Pistol = false;
-    bool Homing = false;
-    bool Shotgun = false;
-    bool BigGun = false;
-    bool FastGun = false;
+    [SerializeField] bool shootOn = true;
+    [SerializeField] bool Pistol = false;
+    [SerializeField] bool Homing = false;
+    [SerializeField] bool Shotgun = false;
+    [SerializeField] bool BigGun = false;
+    [SerializeField] bool FastGun = false;
     bool FollowShots = false;
     void Update()
     {
@@ -54,6 +61,21 @@ public class Weapon1 : MonoBehaviour
                     GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
                     bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
                     Destroy(bullet, BulletDestroy);
+                }if (Homing)
+                {
+                    AudioSource.PlayClipAtPoint(HomingSND, Camera.main.transform.position);
+                }else if (Shotgun)
+                {
+                    AudioSource.PlayClipAtPoint(ShotgunSND, Camera.main.transform.position);
+                }else if (BigGun)
+                {
+                    AudioSource.PlayClipAtPoint(BigGunSND, Camera.main.transform.position);
+                }else if (FastGun)
+                {
+                    AudioSource.PlayClipAtPoint(FastGunSND, Camera.main.transform.position);
+                }else
+                {
+                    AudioSource.PlayClipAtPoint(PistolSND, Camera.main.transform.position);
                 }
             }
         }

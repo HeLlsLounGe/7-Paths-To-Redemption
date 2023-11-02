@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Money
   - Enemies
+  - DoorTP
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - BG
   - 
   - 
   - 
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: Walls
     uniqueID: 2469651055
+    locked: 0
+  - name: Doors
+    uniqueID: 639150115
     locked: 0
   - name: Pickups
     uniqueID: 3015004325
