@@ -43,7 +43,7 @@ public class GameSession : MonoBehaviour
     {
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene("Home");
-        Destroy(gameObject);;
+        Destroy(gameObject);
     }void TakeLife()
     {
         PlayerLives --;

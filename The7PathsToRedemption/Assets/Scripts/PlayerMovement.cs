@@ -7,16 +7,16 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float PlayerSpeed = 10f;
     [SerializeField] float PlayerLives = 3f;
+    [SerializeField] AudioClip Damage;
     Vector2 moveInput;
 
     Rigidbody2D myRigidBody;
-
+    Animator MyAnimator;
     bool IsAlive = true;
-
-
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        MyAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.tag == "Enemies")
         {
             PlayerLives--;
+            AudioSource.PlayClipAtPoint(Damage, Camera.main.transform.position);
         }
     }
     void Dmg()
@@ -57,5 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         bool PlayerHZMoving = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
         bool PlayerVCMoving = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon;
+        MyAnimator.SetFloat("x", moveInput.x);
+        MyAnimator.SetFloat("y", -moveInput.y);
     }
 }

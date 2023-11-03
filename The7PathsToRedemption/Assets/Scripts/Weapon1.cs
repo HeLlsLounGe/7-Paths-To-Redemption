@@ -11,15 +11,23 @@ public class Weapon1 : MonoBehaviour
     [SerializeField] float BulletDmg = 2f;
     [SerializeField] float BulletDestroy = 5f;
     [SerializeField] float Knockback = 1;
+
+    [SerializeField] AudioClip PistolSND;
+    [SerializeField] AudioClip HomingSND;
+    [SerializeField] AudioClip ShotgunSND;
+    [SerializeField] AudioClip BigGunSND;
+    [SerializeField] AudioClip FastGunSND;
+
     float BulletTimeChecker = 1000f;
     float x = 1;
     float y = 0;
-    bool shootOn = true;
-    bool Pistol = false;
-    bool Homing = false;
-    bool Shotgun = false;
-    bool BigGun = false;
-    bool FastGun = false;
+    [SerializeField] bool shootOn = true;
+    [SerializeField] bool Pistol = false;
+    [SerializeField] bool Homing = false;
+    [SerializeField] bool Shotgun = false;
+    [SerializeField] bool BigGun = false;
+    [SerializeField] bool FastGun = false;
+    bool FollowShots = false;
     void Update()
     {
         if (shootOn)
@@ -53,6 +61,21 @@ public class Weapon1 : MonoBehaviour
                     GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
                     bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
                     Destroy(bullet, BulletDestroy);
+                }if (Homing)
+                {
+                    AudioSource.PlayClipAtPoint(HomingSND, Camera.main.transform.position);
+                }else if (Shotgun)
+                {
+                    AudioSource.PlayClipAtPoint(ShotgunSND, Camera.main.transform.position);
+                }else if (BigGun)
+                {
+                    AudioSource.PlayClipAtPoint(BigGunSND, Camera.main.transform.position);
+                }else if (FastGun)
+                {
+                    AudioSource.PlayClipAtPoint(FastGunSND, Camera.main.transform.position);
+                }else
+                {
+                    AudioSource.PlayClipAtPoint(PistolSND, Camera.main.transform.position);
                 }
             }
         }
@@ -61,29 +84,38 @@ public class Weapon1 : MonoBehaviour
             ShotsPerSec = .4f;
             BulletDmg = 2f;
             Knockback = 1f;
-        }else if (Homing)
+            FollowShots = false;
+        }
+        else if (Homing)
         {
             ShotsPerSec = .5f;
             BulletDmg = 2f;
-            Knockback = 3f;
+            Knockback = 2f;
+            FollowShots = true;
         }else if (Shotgun)
         {
             ShotsPerSec = 1.5f;
             BulletDmg = 2.5f;
             Knockback = 6f;
-        }else if (BigGun)
+            FollowShots = false;
+        }
+        else if (BigGun)
         {
             ShotsPerSec = .4f;
             BulletDmg = 8f;
             Knockback = 8f;
-        }else if (FastGun)
+            FollowShots = false;
+        }
+        else if (FastGun)
         {
-            ShotsPerSec = .4f;
-            BulletDmg = 2f;
+            ShotsPerSec = .2f;
+            BulletDmg = 1f;
             Knockback = 0f;
-        }else
+            FollowShots = false;
+        }
+        else
         {
-            //shootOn = false;
+            shootOn = false;
         }
     }
 }
