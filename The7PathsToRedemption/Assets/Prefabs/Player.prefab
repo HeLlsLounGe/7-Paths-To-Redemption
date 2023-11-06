@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375488169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.64, y: 2, z: 10}
+  m_LocalPosition: {x: -4.37, y: 1.72, z: 10}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.6860736}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07613923, y: 0.3677, z: -3.937981}
+  m_LocalPosition: {x: 0.0000033818212, y: 1.472328, z: -3.937981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1075,6 +1075,12 @@ MonoBehaviour:
   ShotgunSND: {fileID: 0}
   BigGunSND: {fileID: 0}
   FastGunSND: {fileID: 8300000, guid: 382c17c0062a9554198fa5030b577954, type: 3}
+  shootOn: 1
+  Pistol: 0
+  Homing: 0
+  Shotgun: 0
+  BigGun: 0
+  FastGun: 0
 --- !u!82 &325050271
 AudioSource:
   m_ObjectHideFlags: 0

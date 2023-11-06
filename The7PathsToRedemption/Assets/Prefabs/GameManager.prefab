@@ -136,7 +136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 244, y: -79.69998}
+  m_AnchoredPosition: {x: 189.2, y: -98.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1637650056
@@ -284,3 +284,8 @@ MonoBehaviour:
   PlayerLives: 1
   Cash: 0
   CashText: {fileID: 1637650055}
+  pLevel: 0
+  hLevel: 0
+  sLevel: 0
+  bLevel: 0
+  fLevel: 0

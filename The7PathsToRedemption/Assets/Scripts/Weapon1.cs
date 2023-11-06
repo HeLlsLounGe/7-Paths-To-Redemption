@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Weapon1 : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Weapon1 : MonoBehaviour
     [SerializeField] AudioClip BigGunSND;
     [SerializeField] AudioClip FastGunSND;
 
-    float BulletTimeChecker = 1000f;
+    float BulletTimeChecker = 1f;
     float x = 1;
     float y = 0;
     [SerializeField] bool shootOn = true;
@@ -28,8 +29,21 @@ public class Weapon1 : MonoBehaviour
     [SerializeField] bool BigGun = false;
     [SerializeField] bool FastGun = false;
     bool FollowShots = false;
+
+    int PistLVL = 0;
+    int HomLVL = 0;
+    int ShoLVL = 0;
+    int BigLVL = 0;
+    int FastLVL = 0;
     void Update()
     {
+        PistLVL = FindAnyObjectByType<GameSession>().pLevel;
+        HomLVL = FindAnyObjectByType<GameSession>().hLevel;
+        ShoLVL = FindAnyObjectByType<GameSession>().sLevel;
+        BigLVL = FindAnyObjectByType<GameSession>().bLevel;
+        FastLVL = FindAnyObjectByType<GameSession>().fLevel;
+
+       
         if (shootOn)
         {
             if (mouseShoot)
@@ -52,38 +66,12 @@ public class Weapon1 : MonoBehaviour
                     y = tempY;
                 }
             }
-            if (Input.GetButton("Fire1"))
-            {
-                BulletTimeChecker += Time.deltaTime;
-                if (BulletTimeChecker >= ShotsPerSec)
-                {
-                    BulletTimeChecker = 0;
-                    GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
-                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
-                    Destroy(bullet, BulletDestroy);
-                }if (Homing)
-                {
-                    AudioSource.PlayClipAtPoint(HomingSND, Camera.main.transform.position);
-                }else if (Shotgun)
-                {
-                    AudioSource.PlayClipAtPoint(ShotgunSND, Camera.main.transform.position);
-                }else if (BigGun)
-                {
-                    AudioSource.PlayClipAtPoint(BigGunSND, Camera.main.transform.position);
-                }else if (FastGun)
-                {
-                    AudioSource.PlayClipAtPoint(FastGunSND, Camera.main.transform.position);
-                }else
-                {
-                    AudioSource.PlayClipAtPoint(PistolSND, Camera.main.transform.position);
-                }
-            }
         }
         if (Pistol)
         {
             ShotsPerSec = .4f;
-            BulletDmg = 2f;
-            Knockback = 1f;
+            BulletDmg = 2f + PistLVL;
+            Knockback = 1f + PistLVL;
             FollowShots = false;
         }
         else if (Homing)
@@ -116,6 +104,40 @@ public class Weapon1 : MonoBehaviour
         else
         {
             shootOn = false;
+        }
+    }
+    void OnFire(InputValue value)
+    {
+        BulletTimeChecker += Time.deltaTime;
+        if (shootOn == true)
+        {
+            if (BulletTimeChecker >= ShotsPerSec)
+            {
+                BulletTimeChecker = 0;
+                GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
+                Destroy(bullet, BulletDestroy);
+            }
+            if (Homing)
+            {
+                AudioSource.PlayClipAtPoint(HomingSND, Camera.main.transform.position);
+            }
+            else if (Shotgun)
+            {
+                AudioSource.PlayClipAtPoint(ShotgunSND, Camera.main.transform.position);
+            }
+            else if (BigGun)
+            {
+                AudioSource.PlayClipAtPoint(BigGunSND, Camera.main.transform.position);
+            }
+            else if (FastGun)
+            {
+                AudioSource.PlayClipAtPoint(FastGunSND, Camera.main.transform.position);
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(PistolSND, Camera.main.transform.position);
+            }
         }
     }
 }

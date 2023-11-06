@@ -3,9 +3,8 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-
+#if UNITY_EDITOR
 [RequireComponent(typeof(CompositeCollider2D))]
-
 public class WallShadows : MonoBehaviour
 {
 	[SerializeField]
@@ -82,6 +81,8 @@ public class ShadowCaster2DTileMapEditor : Editor
 	}
 
 }
+
+#endif
 
 
 

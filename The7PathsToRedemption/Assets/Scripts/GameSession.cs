@@ -10,6 +10,12 @@ public class GameSession : MonoBehaviour
     [SerializeField] int PlayerLives = 1;
     [SerializeField] int Cash = 0;
     [SerializeField] TextMeshProUGUI CashText;
+    public int pLevel = 0;
+    public int hLevel = 0;
+    public int sLevel = 0;
+    public int bLevel = 0;
+    public int fLevel = 0;
+
     void Start()
     {
         CashText.text = Cash.ToString();
@@ -47,5 +53,25 @@ public class GameSession : MonoBehaviour
     }void TakeLife()
     {
         PlayerLives --;
+    }
+    public void pUpg()
+    {
+        pLevel++;
+    }
+    public void hUpg()
+    {
+        hLevel++;
+    }
+    public void sUpg()
+    {
+        sLevel++;
+    }
+    public void bUpg()
+    {
+        bLevel++;
+    }
+    public void fUpg()
+    {
+        fLevel++;
     }
 }
