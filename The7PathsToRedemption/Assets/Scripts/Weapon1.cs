@@ -37,6 +37,8 @@ public class Weapon1 : MonoBehaviour
     int FastLVL = 0;
     void Update()
     {
+        BulletTimeChecker += Time.deltaTime;
+
         PistLVL = FindAnyObjectByType<GameSession>().pLevel;
         HomLVL = FindAnyObjectByType<GameSession>().hLevel;
         ShoLVL = FindAnyObjectByType<GameSession>().sLevel;
@@ -108,7 +110,6 @@ public class Weapon1 : MonoBehaviour
     }
     void OnFire(InputValue value)
     {
-        BulletTimeChecker += Time.deltaTime;
         if (shootOn == true)
         {
             if (BulletTimeChecker >= ShotsPerSec)

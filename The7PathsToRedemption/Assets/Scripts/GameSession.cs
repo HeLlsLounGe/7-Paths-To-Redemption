@@ -10,6 +10,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] int PlayerLives = 1;
     [SerializeField] int Cash = 0;
     [SerializeField] TextMeshProUGUI CashText;
+    [SerializeField] AudioClip CoinSound;
     public int pLevel = 0;
     public int hLevel = 0;
     public int sLevel = 0;
@@ -35,6 +36,7 @@ public class GameSession : MonoBehaviour
     {
         Cash += cashToAdd;
         CashText.text = Cash.ToString();
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(CoinSound);
     }
     public void ProcessPlayerDmg()
     {

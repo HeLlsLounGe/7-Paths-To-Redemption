@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -656232413
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 0.40392157}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 6549868289115849494}
   - component: {fileID: 6549868289115849495}
   - component: {fileID: 6309615731686439866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Money
   m_TagString: Money
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -656232413
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1430726618, guid: 05cc10b0451e54c46927b32fda5e086a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -235,9 +235,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: 0.31685257, y: 0.11645222}
+      - {x: -0.0023765564, y: 0.47517157}
+      - {x: -0.32240486, y: 0.124474525}
+      - {x: -0.47148323, y: -0.37659544}
+      - {x: 0.00872612, y: -0.43600655}
+      - {x: 0.4643526, y: -0.37659544}
 --- !u!114 &6549868289115849495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsPerPickup: 1
-  Parent: {fileID: 3741998219721323936, guid: 559d12f8a93a3af43aadb3aeb5c4fd5b, type: 3}
+  Parent: {fileID: 0}
+  CoinSound: {fileID: 8300000, guid: 50ffd995166c11446af216c25e28660b, type: 3}
 --- !u!95 &6309615731686439866
 Animator:
   serializedVersion: 5
