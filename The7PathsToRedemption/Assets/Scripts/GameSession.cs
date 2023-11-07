@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +10,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] int Cash = 0;
     [SerializeField] TextMeshProUGUI CashText;
     [SerializeField] AudioClip CoinSound;
+    [SerializeField] List<int> rooms;
     public int pLevel = 0;
     public int hLevel = 0;
     public int sLevel = 0;
@@ -43,7 +43,7 @@ public class GameSession : MonoBehaviour
         if (PlayerLives > 1)
         {
             TakeLife();
-        }else
+        }else if (PlayerLives <= 1)
         {
             ResetGameSession();
         }
@@ -51,7 +51,7 @@ public class GameSession : MonoBehaviour
     {
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene("Home");
-        Destroy(gameObject);
+        PlayerLives = 1;
     }void TakeLife()
     {
         PlayerLives --;
@@ -75,5 +75,18 @@ public class GameSession : MonoBehaviour
     public void fUpg()
     {
         fLevel++;
+    }
+    public void NextRoom()
+    {
+        if (rooms.Count != 0)
+        {
+            int r = Random.Range(0, rooms.Count);
+            SceneManager.LoadScene(r);
+            rooms.RemoveAt(r);
+        }
+        else
+        {
+            //load boss
+        }
     }
 }

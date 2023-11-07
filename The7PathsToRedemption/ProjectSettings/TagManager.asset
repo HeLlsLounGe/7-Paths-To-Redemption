@@ -19,9 +19,9 @@ TagManager:
   - BG
   - Cam
   - Money
-  - 
-  - 
-  - 
+  - Walls
+  - Enemies
+  - Groundcolliders
   - 
   - 
   - 

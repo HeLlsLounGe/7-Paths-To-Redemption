@@ -255,7 +255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinsPerPickup: 1
   Parent: {fileID: 0}
-  CoinSound: {fileID: 8300000, guid: 50ffd995166c11446af216c25e28660b, type: 3}
 --- !u!95 &6309615731686439866
 Animator:
   serializedVersion: 5
