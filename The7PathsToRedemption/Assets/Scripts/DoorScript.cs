@@ -6,6 +6,6 @@ public class DoorScript : MonoBehaviour
 {
     void Update()
     {
-        if ()
+        //if ()
     }
 }
