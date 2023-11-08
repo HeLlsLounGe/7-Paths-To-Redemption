@@ -60,6 +60,9 @@ TagManager:
   - name: Player
     uniqueID: 3638734883
     locked: 0
+  - name: BrightEnemies
+    uniqueID: 1496192691
+    locked: 0
   - name: Enemies
     uniqueID: 1159700845
     locked: 0

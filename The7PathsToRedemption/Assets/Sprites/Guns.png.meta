@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93831ed8f8741984c9e40d5436cd0737
+guid: 2426fe81553a83e49bec2b54c9c9d323
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,138 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Phlegmodon_0
+      name: Guns_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26e8f57bfbe42f41b10d0b82145783c
+      internalID: -2034257049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guns_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230187eac810a5d4abdd1ff44321b36f
+      internalID: -884076464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guns_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3646f54349acf2d4cbc2961c5ff616a9
+      internalID: 568193338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guns_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9213f889bb53f864696485a578aa8c4a
+      internalID: 1280635207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guns_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d16005039faf444b8b9f3433931c41
+      internalID: -108521841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guns_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5430fb1520b8cf94a9db7b4d74d1a5f8
+      internalID: -1316823074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guns_6
       rect:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,40 +257,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d3dc28a8b1b14f40b8639e101df6404
-      internalID: -163812832
+      spriteID: b26691bbd1450e145aba52746155aeba
+      internalID: -1586453643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phlegmodon_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cfa9abce8f87da49b43ad4cb171a319
-      internalID: -1804755842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Phlegmodon_2
+      name: Guns_7
       rect:
         serializedVersion: 2
         x: 128
         y: 128
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,19 +278,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1abe9e8b9d6f23445b7298e7c20ade35
-      internalID: -144956495
+      spriteID: 4e19460fd2de79f4398f9f9d99d38a06
+      internalID: -2143239577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phlegmodon_3
+      name: Guns_8
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,40 +299,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3dc4805e33b1de4cbbde1312001cc93
-      internalID: -1406073502
+      spriteID: a1f26c6380733e0479167949614e89c4
+      internalID: 1862492631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phlegmodon_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f2dd531da672974e8cca712d7bdf1eb
-      internalID: 322881565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Phlegmodon_5
+      name: Guns_9
       rect:
         serializedVersion: 2
         x: 128
         y: 64
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,19 +320,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b04cdff2b70140a44b2e4800ff65e3ce
-      internalID: 1305066735
+      spriteID: 73433185eac6c394bbf71f981160c851
+      internalID: -547095613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phlegmodon_6
+      name: Guns_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -257,8 +341,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8913a6ee0eb3f5a45bc07a68941d5357
-      internalID: 1609041312
+      spriteID: efca3c3b4ef91a44c86a25253ac7e074
+      internalID: 1608647485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guns_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c68fe601d3e0d145a3b3ad4bf33909b
+      internalID: 997783567
       vertices: []
       indices: 
       edges: []
@@ -274,13 +379,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Phlegmodon_0: -163812832
-      Phlegmodon_1: -1804755842
-      Phlegmodon_2: -144956495
-      Phlegmodon_3: -1406073502
-      Phlegmodon_4: 322881565
-      Phlegmodon_5: 1305066735
-      Phlegmodon_6: 1609041312
+      Guns_0: -2034257049
+      Guns_1: -884076464
+      Guns_10: 1608647485
+      Guns_11: 997783567
+      Guns_2: 568193338
+      Guns_3: 1280635207
+      Guns_4: -108521841
+      Guns_5: -1316823074
+      Guns_6: -1586453643
+      Guns_7: -2143239577
+      Guns_8: 1862492631
+      Guns_9: -547095613
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

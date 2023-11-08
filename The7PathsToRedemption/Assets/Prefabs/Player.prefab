@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 70994432}
   - component: {fileID: 70994433}
   - component: {fileID: 2071552707}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: VirtCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70994431}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.937981}
+  m_LocalPosition: {x: 0, y: 0.000000066227386, z: -3.937981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1033615395
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 1430726618, guid: 05cc10b0451e54c46927b32fda5e086a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
