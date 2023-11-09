@@ -39,24 +39,19 @@ public class Weapon1 : MonoBehaviour
     {
         BulletTimeChecker += Time.deltaTime;
 
-        PistLVL = FindAnyObjectByType<GameSession>().pLevel;
-        HomLVL = FindAnyObjectByType<GameSession>().hLevel;
-        ShoLVL = FindAnyObjectByType<GameSession>().sLevel;
-        BigLVL = FindAnyObjectByType<GameSession>().bLevel;
-        FastLVL = FindAnyObjectByType<GameSession>().fLevel;
-
-       
         if (shootOn)
         {
             if (mouseShoot)
             {
-                Vector3 mousePosition = Input.mousePosition;
-                mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                Vector3 mousePosition;
+                Vector2 temp = new Vector2(Mouse.current.position.x.ReadValue(), Mouse.current.position.y.ReadValue());
+                mousePosition = Camera.main.ScreenToWorldPoint(temp);
                 Vector3 shootDir = mousePosition - transform.position;
                 shootDir.z = 0;
                 shootDir.Normalize();
                 x = shootDir.x;
                 y = shootDir.y;
+                Debug.Log("x = " + x + " and y = " + y);
             }
             else
             {
@@ -64,8 +59,8 @@ public class Weapon1 : MonoBehaviour
                 float tempY = Input.GetAxisRaw("Vertical");
                 if (tempX != 0 || tempY != 0)
                 {
-                    x = tempX;
-                    y = tempY;
+                   // x = tempX;
+                   // y = tempY;
                 }
             }
         }
@@ -91,7 +86,7 @@ public class Weapon1 : MonoBehaviour
         }
         else if (BigGun)
         {
-            ShotsPerSec = .4f;
+            ShotsPerSec = 2f;
             BulletDmg = 8f;
             Knockback = 8f;
             FollowShots = false;
@@ -105,7 +100,7 @@ public class Weapon1 : MonoBehaviour
         }
         else
         {
-            shootOn = false;
+            //shootOn = false;
         }
     }
     void OnFire(InputValue value)
@@ -114,10 +109,14 @@ public class Weapon1 : MonoBehaviour
         {
             if (BulletTimeChecker >= ShotsPerSec)
             {
-                BulletTimeChecker = 0;
-                GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
-                Destroy(bullet, BulletDestroy);
+                
+
+
+                    BulletTimeChecker = 0;
+                    GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
+                    Destroy(bullet, BulletDestroy);
+                
             }
             if (Homing)
             {
@@ -139,6 +138,14 @@ public class Weapon1 : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(PistolSND, Camera.main.transform.position);
             }
+        }
+    }
+    private void OnMove(InputValue value)
+    {
+        if (value.Get<Vector2>().magnitude != 0 && !mouseShoot)
+        {
+            x = value.Get<Vector2>().x;
+            y = value.Get<Vector2>().y;
         }
     }
 }

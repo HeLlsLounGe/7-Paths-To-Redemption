@@ -81,7 +81,7 @@ public class GameSession : MonoBehaviour
     }
     public void NextRoom()
     {
-        if (rooms.Count != 0)
+        if (rooms.Count > 0)
         {
             int r = Random.Range(0, rooms.Count);
             SceneManager.LoadScene(r);
@@ -89,7 +89,7 @@ public class GameSession : MonoBehaviour
         }
         else
         {
-            //load boss
+            SceneManager.LoadScene("Home");
         }
     }
 }

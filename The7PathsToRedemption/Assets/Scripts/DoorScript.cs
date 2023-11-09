@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if ()
+        if (collision.tag == "Player")
+        {
+            FindObjectOfType<GameSession>().NextRoom();
+        }
     }
 }

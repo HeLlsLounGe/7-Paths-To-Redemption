@@ -159,7 +159,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1033615395
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 1430726618, guid: 05cc10b0451e54c46927b32fda5e086a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   BulletDmg: 2
   BulletDestroy: 5
   Knockback: 1
-  PistolSND: {fileID: 8300000, guid: 382c17c0062a9554198fa5030b577954, type: 3}
+  PistolSND: {fileID: 8300000, guid: 3c3493c097b42a0429b4bdc48d26a9a0, type: 3}
   HomingSND: {fileID: 8300000, guid: 4658458043e5f0b478f22d6e6d578443, type: 3}
   ShotgunSND: {fileID: 0}
   BigGunSND: {fileID: 0}
