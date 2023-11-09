@@ -10,7 +10,9 @@ public class GameSession : MonoBehaviour
     [SerializeField] int Cash = 0;
     [SerializeField] TextMeshProUGUI CashText;
     [SerializeField] AudioClip CoinSound;
+    [SerializeField] AudioClip DeathSound;
     [SerializeField] List<int> rooms;
+    [SerializeField] int LifeFull = 1;
     public int pLevel = 0;
     public int hLevel = 0;
     public int sLevel = 0;
@@ -49,9 +51,10 @@ public class GameSession : MonoBehaviour
         }
     }void ResetGameSession()
     {
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(DeathSound);
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene("Home");
-        PlayerLives = 1;
+        PlayerLives = LifeFull;
     }void TakeLife()
     {
         PlayerLives --;

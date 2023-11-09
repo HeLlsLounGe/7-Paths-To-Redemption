@@ -284,6 +284,10 @@ MonoBehaviour:
   PlayerLives: 1
   Cash: 0
   CashText: {fileID: 1637650055}
+  CoinSound: {fileID: 8300000, guid: 725ac582a66485e49822e9964e62b6cd, type: 3}
+  DeathSound: {fileID: 8300000, guid: b572a97f2cfb3a049a4a8247f08ff179, type: 3}
+  rooms: 
+  LifeFull: 1
   pLevel: 0
   hLevel: 0
   sLevel: 0
