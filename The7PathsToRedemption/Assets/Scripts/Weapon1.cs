@@ -51,7 +51,7 @@ public class Weapon1 : MonoBehaviour
                 shootDir.Normalize();
                 x = shootDir.x;
                 y = shootDir.y;
-                Debug.Log("x = " + x + " and y = " + y);
+                //Debug.Log("x = " + x + " and y = " + y);
             }
             else
             {
@@ -62,6 +62,15 @@ public class Weapon1 : MonoBehaviour
                    // x = tempX;
                    // y = tempY;
                 }
+            }
+            PistLVL = FindObjectOfType<GameSession>().pLevel;
+            HomLVL = FindObjectOfType<GameSession>().hLevel;
+            ShoLVL = FindObjectOfType<GameSession>().sLevel;
+            BigLVL = FindObjectOfType<GameSession>().bLevel;
+            FastLVL = FindObjectOfType<GameSession>().fLevel;
+            if (PistLVL >= 1)
+            {
+                Debug.Log("Finished");
             }
         }
         if (Pistol)
@@ -80,14 +89,14 @@ public class Weapon1 : MonoBehaviour
         }else if (Shotgun)
         {
             ShotsPerSec = 1.5f;
-            BulletDmg = 2.5f;
+            BulletDmg = 3f;
             Knockback = 6f;
             FollowShots = false;
         }
         else if (BigGun)
         {
             ShotsPerSec = 2f;
-            BulletDmg = 8f;
+            BulletDmg = 6f;
             Knockback = 8f;
             FollowShots = false;
         }

@@ -8,6 +8,7 @@ TagManager:
   - Enemies
   - DoorTP
   - Shop
+  - Bullet
   layers:
   - Default
   - TransparentFX

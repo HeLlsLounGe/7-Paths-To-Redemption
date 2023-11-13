@@ -7,6 +7,7 @@ public class PlayerUpg : MonoBehaviour
     public void upgradeP()
     {
         FindObjectOfType<GameSession>().pUpg();
+        Debug.Log("button hit");
     }
     public void upgradeH()
     {
