@@ -62,7 +62,6 @@ public class GameSession : MonoBehaviour
     public void pUpg()
     {
         pLevel++;
-        Debug.Log("Upgraded");
     }
     public void hUpg()
     {
