@@ -78,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159700845
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 6
   m_Sprite: {fileID: -740176465, guid: fd9e2ea8b2015f0459c0c39c5df44e0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106,7 +106,7 @@ MonoBehaviour:
   player: {fileID: 0}
   MoveSpeed: 4
   Health: 3
-  prefab: {fileID: 4947421440002312463, guid: 411abc6b782549044ae91fa78fd71d43, type: 3}
+  prefab: {fileID: 72819137796607897, guid: f4628e523ec7e3b40baf908237432bc7, type: 3}
 --- !u!50 &4816351939477098672
 Rigidbody2D:
   serializedVersion: 4
@@ -285,7 +285,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159700845
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.11320752, g: 0.11267352, b: 0.11267352, a: 0.44705883}

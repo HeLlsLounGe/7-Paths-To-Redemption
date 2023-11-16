@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NormZone/NormPit1Pillar.unity
     guid: 1c0d2757d7be30b4f86696996392758e
+  - enabled: 1
+    path: Assets/Scenes/NormZone/2StatuesStair.unity
+    guid: 07efd7f3c6405b94387d6de4eadc58e0
+  - enabled: 1
+    path: Assets/Scenes/NormZone/BIGSTATUE.unity
+    guid: 4d0a3c0a45bb6224a97df0ac40621a11
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d6ba4313995887d468ca2f09468ff93a, type: 2}

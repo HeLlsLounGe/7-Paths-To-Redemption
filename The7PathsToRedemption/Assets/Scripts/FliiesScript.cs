@@ -8,6 +8,7 @@ public class FliiesScript : MonoBehaviour
     [SerializeField] float MoveSpeed = 5f;
     [SerializeField] float Health = 1f;
     [SerializeField] GameObject prefab;
+    float PlayerDMG = 0;
 
     bool IsAlive = true;
     private void Start()
@@ -16,6 +17,7 @@ public class FliiesScript : MonoBehaviour
     }
     void Update()
     {
+        PlayerDMG = FindObjectOfType<Weapon1>().BulletDmg;
         if (Health < 1)
         {
             IsAlive = false;
@@ -31,6 +33,13 @@ public class FliiesScript : MonoBehaviour
         {
             Instantiate(prefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            Health -= PlayerDMG;
         }
     }
 }

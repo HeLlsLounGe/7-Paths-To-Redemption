@@ -11,7 +11,6 @@ public class Weapon1 : MonoBehaviour
     [SerializeField] bool mouseShoot = true;
     [SerializeField] public float BulletDmg = 2f;
     [SerializeField] float BulletDestroy = 5f;
-    [SerializeField] float Knockback = 1;
 
     [SerializeField] AudioClip PistolSND;
     [SerializeField] AudioClip HomingSND;
@@ -22,12 +21,12 @@ public class Weapon1 : MonoBehaviour
     float BulletTimeChecker = 1f;
     float x = 1;
     float y = 0;
-    [SerializeField] bool shootOn = true;
-    [SerializeField] bool Pistol = false;
-    [SerializeField] bool Homing = false;
-    [SerializeField] bool Shotgun = false;
-    [SerializeField] bool BigGun = false;
-    [SerializeField] bool FastGun = false;
+    [SerializeField] public bool shootOn = true;
+    [SerializeField] public bool Pistol = false;
+    [SerializeField] public bool Homing = false;
+    [SerializeField] public bool Shotgun = false;
+    [SerializeField] public bool BigGun = false;
+    [SerializeField] public bool FastGun = false;
     bool FollowShots = false;
 
     int PistLVL = 0;
@@ -38,6 +37,11 @@ public class Weapon1 : MonoBehaviour
     void Update()
     {
         BulletTimeChecker += Time.deltaTime;
+        Pistol = FindObjectOfType<GameSession>().Pistol;
+        Homing = FindObjectOfType<GameSession>().Homing;
+        Shotgun = FindObjectOfType<GameSession>().Shotgun;
+        BigGun = FindObjectOfType<GameSession>().BigGun;
+        FastGun = FindObjectOfType<GameSession>().FastGun;
 
         if (shootOn)
         {
@@ -69,33 +73,39 @@ public class Weapon1 : MonoBehaviour
             FastLVL = FindObjectOfType<GameSession>().fLevel;
         }
         if (Pistol)
-        {
+        { 
             ShotsPerSec = .4f;
             BulletDmg = 2f + PistLVL;
             FollowShots = false;
+            shootOn = true;
         }
         else if (Homing)
         {
             ShotsPerSec = .5f;
             BulletDmg = 2f + HomLVL;
             FollowShots = true;
-        }else if (Shotgun)
+            shootOn = true;
+        }
+        else if (Shotgun)
         {
             ShotsPerSec = 1.5f;
             BulletDmg = 3f + ShoLVL;
             FollowShots = false;
+            shootOn = true;
         }
         else if (BigGun)
         {
             ShotsPerSec = 2f;
             BulletDmg = 6f + BigLVL;
             FollowShots = false;
+            shootOn = true;
         }
         else if (FastGun)
         {
             ShotsPerSec = .2f;
             BulletDmg = 1f + FastLVL;
             FollowShots = false;
+            shootOn = true;
         }
         else
         {

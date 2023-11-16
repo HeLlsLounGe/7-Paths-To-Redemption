@@ -18,10 +18,25 @@ public class GameSession : MonoBehaviour
     public int sLevel = 0;
     public int bLevel = 0;
     public int fLevel = 0;
+    public bool Pistol = false;
+    public bool Homing = false;
+    public bool Shotgun = false;
+    public bool BigGun = false;
+    public bool FastGun = false;
 
     void Start()
     {
         CashText.text = Cash.ToString();
+    }
+    private void Update()
+    {
+        if (Pistol||Homing||Shotgun||BigGun||FastGun)
+        {
+            Time.timeScale = 1f;
+        }else
+        {
+            Time.timeScale = 0f;
+        }
     }
     void Awake()
     {
@@ -91,5 +106,45 @@ public class GameSession : MonoBehaviour
         {
             SceneManager.LoadScene("Home");
         }
+    }
+    public void PT()
+    {
+        Pistol = true;
+        Homing = false;
+        Shotgun = false;
+        BigGun = false;
+        FastGun = false;
+    }
+    public void HT()
+    {
+        Homing = true;
+        Pistol = false;
+        Shotgun = false;
+        BigGun = false;
+        FastGun = false;
+    }
+    public void ST()
+    {
+        Shotgun = true;
+        Pistol = false;
+        Homing = false;
+        BigGun = false;
+        FastGun = false;
+    }
+    public void BT()
+    {
+        BigGun = true;
+        Pistol = false;
+        Homing = false;
+        Shotgun = false;
+        FastGun = false;
+    }
+    public void FT()
+    {
+        FastGun = true;
+        Pistol = false;
+        Homing = false;
+        Shotgun = false;
+        BigGun = false;
     }
 }
