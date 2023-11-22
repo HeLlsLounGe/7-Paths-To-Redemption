@@ -57,7 +57,7 @@ public class Belphegore : MonoBehaviour
             MoveDirection.Normalize();
             GetComponent<Rigidbody2D>().velocity = MoveDirection * MoveSpeed;
         }
-        else
+        else if (IsAlive == false)
         {
             MyAnimator.SetBool("IsAlive", false);
             DestroyTime += Time.deltaTime;
