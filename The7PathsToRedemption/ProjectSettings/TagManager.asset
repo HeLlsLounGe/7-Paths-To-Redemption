@@ -10,6 +10,7 @@ TagManager:
   - Shop
   - Bullet
   - Wall
+  - Mammon
   layers:
   - Default
   - TransparentFX

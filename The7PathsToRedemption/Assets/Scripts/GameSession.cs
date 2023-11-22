@@ -7,7 +7,7 @@ using TMPro;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int PlayerLives = 1;
-    [SerializeField] int Cash = 0;
+    [SerializeField] public int Cash = 0;
     [SerializeField] TextMeshProUGUI CashText;
     [SerializeField] AudioClip CoinSound;
     [SerializeField] AudioClip DeathSound;
@@ -35,7 +35,7 @@ public class GameSession : MonoBehaviour
             Time.timeScale = 1f;
         }else
         {
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
         }
     }
     void Awake()
@@ -76,35 +76,35 @@ public class GameSession : MonoBehaviour
     }
     public void pUpg()
     {
-        pLevel++;
+        pLevel = 1;
     }
     public void hUpg()
     {
-        hLevel++;
+        hLevel = 1;
     }
     public void sUpg()
     {
-        sLevel++;
+        sLevel = 1;
     }
     public void bUpg()
     {
-        bLevel++;
+        bLevel = 1;
     }
     public void fUpg()
     {
-        fLevel++;
+        fLevel = 1;
     }
     public void NextRoom()
     {
         if (rooms.Count > 0)
         {
             int r = Random.Range(0, rooms.Count);
-            SceneManager.LoadScene(r);
+            SceneManager.LoadScene(rooms[r]);
             rooms.RemoveAt(r);
         }
         else
         {
-            SceneManager.LoadScene("Home");
+            SceneManager.LoadScene("BossRoom");
         }
     }
     public void PT()

@@ -5,7 +5,12 @@ using UnityEngine.InputSystem;
 
 public class Weapon1 : MonoBehaviour
 {
-    [SerializeField] GameObject prefab;
+    [SerializeField] GameObject prefabp;
+    [SerializeField] GameObject prefabh;
+    [SerializeField] GameObject prefabs;
+    [SerializeField] GameObject prefabb;
+    [SerializeField] GameObject prefabf;
+
     [SerializeField] float shootSpeed = 10f;
     [SerializeField] float ShotsPerSec = 2f;
     [SerializeField] bool mouseShoot = true;
@@ -118,11 +123,42 @@ public class Weapon1 : MonoBehaviour
         {
             if (BulletTimeChecker >= ShotsPerSec)
             {
-                BulletTimeChecker = 0;
-                GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
-                Destroy(bullet, BulletDestroy);
-                
+                if (Pistol)
+                {
+                    BulletTimeChecker = 0;
+                    GameObject bullet = Instantiate(prefabp, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
+                    Destroy(bullet, BulletDestroy);
+                }
+                if (Homing)
+                {
+                    BulletTimeChecker = 0;
+                    GameObject bullet = Instantiate(prefabh, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
+                    Destroy(bullet, BulletDestroy);
+                }
+                if (Shotgun)
+                {
+                    BulletTimeChecker = 0;
+                    GameObject bullet = Instantiate(prefabs, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
+                    Destroy(bullet, BulletDestroy);
+                }
+                if (BigGun)
+                {
+                    BulletTimeChecker = 0;
+                    GameObject bullet = Instantiate(prefabb, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
+                    Destroy(bullet, BulletDestroy);
+                }
+                if (FastGun)
+                {
+                    BulletTimeChecker = 0;
+                    GameObject bullet = Instantiate(prefabf, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * shootSpeed;
+                    Destroy(bullet, BulletDestroy);
+                }
+
             }
             if (Homing)
             {

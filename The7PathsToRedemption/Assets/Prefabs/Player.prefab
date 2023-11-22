@@ -1063,18 +1063,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d559f94ab68038a4088e464746735da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6605604148801416320, guid: 1d1f8ebbbaaf36043b79931aa4227104, type: 3}
+  prefabp: {fileID: 6605604148801416320, guid: 1d1f8ebbbaaf36043b79931aa4227104, type: 3}
+  prefabh: {fileID: 6605604148801416320, guid: 72a3c18726afd6e4e9010c951e62abc4, type: 3}
+  prefabs: {fileID: 6605604148801416320, guid: 2faf006d30a55fd4ebaee66fc6ca6575, type: 3}
+  prefabb: {fileID: 6605604148801416320, guid: da165612a3cf8954a94605085c1bbd9d, type: 3}
+  prefabf: {fileID: 6605604148801416320, guid: 5509d69092708f84fbb5ee4c8b3b3dd6, type: 3}
   shootSpeed: 17
   ShotsPerSec: 0.2
   mouseShoot: 1
   BulletDmg: 2
   BulletDestroy: 5
-  Knockback: 1
   PistolSND: {fileID: 8300000, guid: 3c3493c097b42a0429b4bdc48d26a9a0, type: 3}
-  HomingSND: {fileID: 8300000, guid: 4658458043e5f0b478f22d6e6d578443, type: 3}
-  ShotgunSND: {fileID: 0}
-  BigGunSND: {fileID: 0}
-  FastGunSND: {fileID: 8300000, guid: 382c17c0062a9554198fa5030b577954, type: 3}
+  HomingSND: {fileID: 8300000, guid: 3c3493c097b42a0429b4bdc48d26a9a0, type: 3}
+  ShotgunSND: {fileID: 8300000, guid: 3c3493c097b42a0429b4bdc48d26a9a0, type: 3}
+  BigGunSND: {fileID: 8300000, guid: 3c3493c097b42a0429b4bdc48d26a9a0, type: 3}
+  FastGunSND: {fileID: 8300000, guid: 3c3493c097b42a0429b4bdc48d26a9a0, type: 3}
   shootOn: 1
   Pistol: 0
   Homing: 0

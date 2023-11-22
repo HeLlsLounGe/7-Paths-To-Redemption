@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2426fe81553a83e49bec2b54c9c9d323
+guid: 0acb653c22d6b394fb1ed5a365399b8b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,253 +117,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guns_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f26e8f57bfbe42f41b10d0b82145783c
-      internalID: -2034257049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guns_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 320
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 230187eac810a5d4abdd1ff44321b36f
-      internalID: -884076464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guns_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3646f54349acf2d4cbc2961c5ff616a9
-      internalID: 568193338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guns_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9213f889bb53f864696485a578aa8c4a
-      internalID: 1280635207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guns_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86d16005039faf444b8b9f3433931c41
-      internalID: -108521841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guns_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5430fb1520b8cf94a9db7b4d74d1a5f8
-      internalID: -1316823074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guns_6
+      name: Player Death_0
       rect:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 128
+        width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b26691bbd1450e145aba52746155aeba
-      internalID: -1586453643
+      spriteID: a7aa2d29203aba049a96bfd30a6f113f
+      internalID: 1317057829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_7
+      name: Player Death_1
       rect:
         serializedVersion: 2
-        x: 135
-        y: 157
-        width: 12
-        height: 12
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e19460fd2de79f4398f9f9d99d38a06
-      internalID: -2143239577
+      spriteID: 365a00bb70822f9428a40b4f9dd62f6c
+      internalID: -231270205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_8
+      name: Player Death_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 93
-        width: 12
-        height: 12
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1f26c6380733e0479167949614e89c4
-      internalID: 1862492631
+      spriteID: 49715e25ed6d04a409ca4060eb4cddd3
+      internalID: 518484132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_9
+      name: Player Death_3
       rect:
         serializedVersion: 2
-        x: 136
-        y: 95
-        width: 10
-        height: 8
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73433185eac6c394bbf71f981160c851
-      internalID: -547095613
+      spriteID: dc9ea7c9d97d006458952f5462ed1a76
+      internalID: 1475395915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_10
+      name: Player Death_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 23
-        width: 22
-        height: 22
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efca3c3b4ef91a44c86a25253ac7e074
-      internalID: 1608647485
+      spriteID: d9724e6cbe57fc8469ca00fe5ce5976c
+      internalID: 1508102409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guns_11
+      name: Player Death_5
       rect:
         serializedVersion: 2
-        x: 138
-        y: 32
-        width: 6
-        height: 6
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c68fe601d3e0d145a3b3ad4bf33909b
-      internalID: 997783567
+      spriteID: 6a561d1f14f6b664db2d18a5f557cb98
+      internalID: -858853991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Death_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8015a079800655243b51f696b54eb6e0
+      internalID: 1076611308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Death_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d19f50fab8dea4783bd7df8e4f1945
+      internalID: -1022442612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Death_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f695289b198046448ad3b24372237aff
+      internalID: 263445789
       vertices: []
       indices: 
       edges: []
@@ -379,18 +316,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Guns_0: -2034257049
-      Guns_1: -884076464
-      Guns_10: 1608647485
-      Guns_11: 997783567
-      Guns_2: 568193338
-      Guns_3: 1280635207
-      Guns_4: -108521841
-      Guns_5: -1316823074
-      Guns_6: -1586453643
-      Guns_7: -2143239577
-      Guns_8: 1862492631
-      Guns_9: -547095613
+      Player Death_0: 1317057829
+      Player Death_1: -231270205
+      Player Death_2: 518484132
+      Player Death_3: 1475395915
+      Player Death_4: 1508102409
+      Player Death_5: -858853991
+      Player Death_6: 1076611308
+      Player Death_7: -1022442612
+      Player Death_8: 263445789
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

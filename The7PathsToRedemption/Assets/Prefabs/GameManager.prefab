@@ -286,10 +286,15 @@ MonoBehaviour:
   CashText: {fileID: 1637650055}
   CoinSound: {fileID: 8300000, guid: 725ac582a66485e49822e9964e62b6cd, type: 3}
   DeathSound: {fileID: 8300000, guid: b572a97f2cfb3a049a4a8247f08ff179, type: 3}
-  rooms: 0100000002000000030000000400000005000000
+  rooms: 010000000200000003000000040000000500000006000000070000000800000009000000
   LifeFull: 1
   pLevel: 0
   hLevel: 0
   sLevel: 0
   bLevel: 0
   fLevel: 0
+  Pistol: 0
+  Homing: 0
+  Shotgun: 0
+  BigGun: 0
+  FastGun: 0

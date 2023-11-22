@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2351792646076661770}
   - component: {fileID: 3177631367055206384}
   m_Layer: 13
-  m_Name: Bullet1
+  m_Name: Fast
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6605604148801416320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1395695, y: -1.2798, z: 0}
-  m_LocalScale: {x: 0.382, y: 0.382, z: 0.382}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0.382}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: -656232413
   m_SortingLayer: 5
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.38714847, g: 0.69344527, b: 0.9433962, a: 1}
+  m_Sprite: {fileID: 997783567, guid: 2426fe81553a83e49bec2b54c9c9d323, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,6 +120,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.002004385}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.089113
